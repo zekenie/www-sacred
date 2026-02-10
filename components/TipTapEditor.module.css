@@ -40,19 +40,21 @@
 .root :global(.tiptap) h5,
 .root :global(.tiptap) h6 {
   margin: 0 0 calc(var(--font-size) * var(--theme-line-height-base) * 0.5) 0;
+  font-size: var(--font-size);
   font-weight: 700;
+  text-transform: uppercase;
 }
 
-.root :global(.tiptap) h1 {
-  font-size: calc(var(--font-size) * 1.5);
+.root :global(.tiptap) h1::before {
+  content: '# ';
 }
 
-.root :global(.tiptap) h2 {
-  font-size: calc(var(--font-size) * 1.25);
+.root :global(.tiptap) h2::before {
+  content: '## ';
 }
 
-.root :global(.tiptap) h3 {
-  font-size: calc(var(--font-size) * 1.125);
+.root :global(.tiptap) h3::before {
+  content: '### ';
 }
 
 .root :global(.tiptap) ul,
@@ -70,7 +72,7 @@
 
 .root :global(.tiptap) code {
   background: var(--theme-background-input);
-  padding: 0 0.5ch;
+  padding: 0 1ch;
 }
 
 .root :global(.tiptap) pre {

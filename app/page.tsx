@@ -71,6 +71,7 @@ import TableRow from '@components/TableRow';
 import TableColumn from '@components/TableColumn';
 import Text from '@components/Text';
 import TextArea from '@components/TextArea';
+import TipTapEditor from '@components/TipTapEditor';
 import TreeView from '@components/TreeView';
 import UpdatingDataTable from '@components/examples/UpdatingDataTable';
 import ModalDOMSnake from '@root/components/modals/ModalDOMSnake';
@@ -1557,6 +1558,19 @@ int main() {
           </Card>
           <Card title="AUTO PLAY SLOW">
             <TextArea autoPlay="All of us who do creative work, we get into it because we have good taste. But there is this gap. For the first couple years you make stuff, it’s just not that good. It’s trying to be good, it has potential, but it’s not. But your taste, the thing that got you into the game, is still killer. And your taste is why your work disappoints you." autoPlaySpeedMS={100} isBlink />
+          </Card>
+          <br />
+        </Accordion>
+
+        <Accordion defaultValue={true} title="TIPTAP EDITOR">
+          A rich text editor built on TipTap and ProseMirror, providing structured content editing with support for headings, lists, blockquotes, code blocks, and inline formatting. Use keyboard shortcuts like Ctrl+B for bold, Ctrl+I for italic, and Ctrl+Shift+1-3 for headings.
+          <br />
+          <br />
+          <Card title="EDITOR">
+            <TipTapEditor placeholder="Start writing..." />
+          </Card>
+          <Card title="WITH CONTENT">
+            <TipTapEditor content="<h2>Hello World</h2><p>This is a <strong>rich text editor</strong> built with TipTap and styled to match the terminal aesthetic of SRCL.</p><blockquote><p>The best way to predict the future is to invent it.</p></blockquote><p>Try editing this content. Use keyboard shortcuts:</p><ul><li><p><strong>Ctrl+B</strong> for bold</p></li><li><p><em>Ctrl+I</em> for italic</p></li><li><p><code>Ctrl+E</code> for inline code</p></li></ul>" />
           </Card>
           <br />
         </Accordion>

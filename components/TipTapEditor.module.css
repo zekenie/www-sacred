@@ -1,0 +1,92 @@
+.root {
+  position: relative;
+  background: var(--theme-background);
+  border: 1px solid var(--theme-border);
+  padding: 0;
+}
+
+.focused {
+  border-color: var(--theme-focused-foreground);
+}
+
+.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: calc(var(--font-size) * var(--theme-line-height-base));
+  opacity: 0.5;
+  font-style: italic;
+  pointer-events: none;
+}
+
+.root :global(.tiptap) {
+  outline: none;
+  min-height: calc(var(--font-size) * var(--theme-line-height-base) * 6);
+  padding: calc(var(--font-size) * var(--theme-line-height-base));
+}
+
+.root :global(.tiptap) p {
+  margin: 0 0 calc(var(--font-size) * var(--theme-line-height-base) * 0.5) 0;
+}
+
+.root :global(.tiptap) p:last-child {
+  margin-bottom: 0;
+}
+
+.root :global(.tiptap) h1,
+.root :global(.tiptap) h2,
+.root :global(.tiptap) h3,
+.root :global(.tiptap) h4,
+.root :global(.tiptap) h5,
+.root :global(.tiptap) h6 {
+  margin: 0 0 calc(var(--font-size) * var(--theme-line-height-base) * 0.5) 0;
+  font-weight: 700;
+}
+
+.root :global(.tiptap) h1 {
+  font-size: calc(var(--font-size) * 1.5);
+}
+
+.root :global(.tiptap) h2 {
+  font-size: calc(var(--font-size) * 1.25);
+}
+
+.root :global(.tiptap) h3 {
+  font-size: calc(var(--font-size) * 1.125);
+}
+
+.root :global(.tiptap) ul,
+.root :global(.tiptap) ol {
+  padding-left: 2ch;
+  margin: 0 0 calc(var(--font-size) * var(--theme-line-height-base) * 0.5) 0;
+}
+
+.root :global(.tiptap) blockquote {
+  border-left: 2px solid var(--theme-border);
+  padding-left: 2ch;
+  margin: 0 0 calc(var(--font-size) * var(--theme-line-height-base) * 0.5) 0;
+  opacity: 0.85;
+}
+
+.root :global(.tiptap) code {
+  background: var(--theme-background-input);
+  padding: 0 0.5ch;
+}
+
+.root :global(.tiptap) pre {
+  background: var(--theme-background-input);
+  padding: calc(var(--font-size) * var(--theme-line-height-base) * 0.5);
+  margin: 0 0 calc(var(--font-size) * var(--theme-line-height-base) * 0.5) 0;
+  overflow-x: auto;
+}
+
+.root :global(.tiptap) pre code {
+  background: none;
+  padding: 0;
+}
+
+.root :global(.tiptap) hr {
+  border: none;
+  border-top: 1px solid var(--theme-border);
+  margin: calc(var(--font-size) * var(--theme-line-height-base) * 0.5) 0;
+}
